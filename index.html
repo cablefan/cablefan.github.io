@@ -102,7 +102,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="Filament-using-nodes"><a href="#Filament-using-nodes" class="headerlink" title="Filament using nodes."></a>Filament using nodes.</h2><h3 id="2024-06-12-Select组件通过relationship关联列表"><a href="#2024-06-12-Select组件通过relationship关联列表" class="headerlink" title="[2024-06-12] Select组件通过relationship关联列表"></a>[2024-06-12] Select组件通过relationship关联列表</h3><ol>
+        <h2 id="Laravel-Filament-使用流水笔记。"><a href="#Laravel-Filament-使用流水笔记。" class="headerlink" title="Laravel Filament 使用流水笔记。"></a>Laravel Filament 使用流水笔记。</h2><h3 id="2024-06-12-Select组件通过relationship关联列表"><a href="#2024-06-12-Select组件通过relationship关联列表" class="headerlink" title="[2024-06-12] Select组件通过relationship关联列表"></a>[2024-06-12] Select组件通过relationship关联列表</h3><ol>
 <li>在编辑表中定义BelongsTo字段，关联到提供列表的表Model。<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">category</span>(<span class="params"></span>): <span class="title">BelongsTo</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">belongsTo</span>(<span class="title class_">Category</span>::<span class="variable language_">class</span>, <span class="string">&#x27;category_id&#x27;</span>, <span class="string">&#x27;id&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li>再定义Select组件，使用relationship方法关联进来<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Forms\Components\Select</span>::<span class="title function_ invoke__">make</span>(<span class="string">&#x27;category_id&#x27;</span>) </span><br><span class="line">            -&gt;<span class="title function_ invoke__">relationship</span>(<span class="string">&#x27;category&#x27;</span>, <span class="string">&#x27;name&#x27;</span>), </span><br></pre></td></tr></table></figure></li>
 </ol>
@@ -176,7 +176,7 @@
 <br/>
 Git 全局设置<br/>
 
-<p>git config –global user.name “Cable Home”<br/><br>git config –global user.email “<a href="mailto:&#99;&#x61;&#x62;&#x6c;&#x65;&#x66;&#97;&#x6e;&#64;&#x68;&#x6f;&#x74;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#99;&#x61;&#x62;&#x6c;&#x65;&#x66;&#97;&#x6e;&#64;&#x68;&#x6f;&#x74;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;</a>“<br/></p>
+<p>git config –global user.name “Cable Home”<br/><br>git config –global user.email “<a href="mailto:&#99;&#x61;&#98;&#108;&#101;&#x66;&#97;&#x6e;&#x40;&#104;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;">&#99;&#x61;&#98;&#108;&#101;&#x66;&#97;&#x6e;&#x40;&#104;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;</a>“<br/></p>
 <br/>
 创建一个新仓库<br/>
 git clone http://szdev.f3322.net:10095/private/mybanks.git<br/>
