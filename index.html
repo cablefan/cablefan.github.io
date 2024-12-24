@@ -102,7 +102,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="Laravel-Filament-使用流水笔记。"><a href="#Laravel-Filament-使用流水笔记。" class="headerlink" title="Laravel Filament 使用流水笔记。"></a>Laravel Filament 使用流水笔记。</h2><hr/>
+        <h2 id="Laravel-Filament-使用流水笔记。"><a href="#Laravel-Filament-使用流水笔记。" class="headerlink" title="Laravel Filament 使用流水笔记。"></a><i>Laravel Filament 使用流水笔记。</i></h2><hr/>
 
 <h3 id="2024-06-12-Select组件通过relationship关联列表"><a href="#2024-06-12-Select组件通过relationship关联列表" class="headerlink" title="[2024-06-12] Select组件通过relationship关联列表"></a>[2024-06-12] Select组件通过relationship关联列表</h3><ol>
 <li>在编辑表中定义BelongsTo字段，关联到提供列表的表Model。<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">category</span>(<span class="params"></span>): <span class="title">BelongsTo</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">belongsTo</span>(<span class="title class_">Category</span>::<span class="variable language_">class</span>, <span class="string">&#x27;category_id&#x27;</span>, <span class="string">&#x27;id&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
