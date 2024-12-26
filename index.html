@@ -175,44 +175,23 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h2>GIT命令行指引</h2>
-<i>您还可以按照以下说明从计算机中上传现有文件。</i><br/>
+<i>您还可以按照以下说明从计算机中上传现有文件。</i>
 <hr/>
-<br/>
-Git 全局设置<br/>
 
-<p>git config –global user.name “Cable Home”<br/><br>git config –global user.email “<a href="mailto:&#x63;&#97;&#98;&#108;&#x65;&#102;&#x61;&#110;&#x40;&#104;&#111;&#x74;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#111;&#x6d;">&#x63;&#97;&#98;&#108;&#x65;&#102;&#x61;&#110;&#x40;&#104;&#111;&#x74;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#111;&#x6d;</a>“<br/></p>
-<br/>
-创建一个新仓库<br/>
-git clone http://`{old-domain}`/private/mybanks.git<br/>
-cd mybanks<br/>
-git switch -c main<br/>
-touch README.md<br/>
-git add README.md<br/>
-git commit -m "add README"<br/>
-git push -u origin main<br/>
-<br/>
-推送现有文件夹<br/>
-cd existing_folder<br/>
-git init --initial-branch=main<br/>
-git remote add origin http://`{old-domain}`/private/mybanks.git<br/>
-git add .<br/>
-git commit -m "Initial commit"<br/>
-git push -u origin main<br/>
-<br/>
-推送现有的 Git 仓库<br/>
-cd existing_repo<br/>
-git remote rename origin old-origin<br/>
-git remote add origin http://`{old-domain}`/private/mybanks.git<br/>
-git push -u origin --all<br/>
-git push -u origin --tags<br/>
---------------------------------------------------------------------------------------
+<h3 id="Git-全局设置"><a href="#Git-全局设置" class="headerlink" title="Git 全局设置"></a>Git 全局设置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Cable Home&quot;</span><br><span class="line">git config --global user.email &quot;cablefan@hotmail.com&quot;</span><br></pre></td></tr></table></figure>
 
+<h3 id="创建一个新仓库"><a href="#创建一个新仓库" class="headerlink" title="创建一个新仓库"></a>创建一个新仓库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git clone http://&#123;old-domain&#125;/private/mybanks.git</span><br><span class="line">cd mybanks</span><br><span class="line">git switch -c main</span><br><span class="line">touch README.md</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;add README&quot;</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+
+<h3 id="推送现有文件夹"><a href="#推送现有文件夹" class="headerlink" title="推送现有文件夹"></a>推送现有文件夹</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd existing_folder</span><br><span class="line">git init --initial-branch=main</span><br><span class="line">git remote add origin http://`&#123;old-domain&#125;`/private/mybanks.git</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;Initial commit&quot;</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+
+<h3 id="推送现有的-Git-仓库"><a href="#推送现有的-Git-仓库" class="headerlink" title="推送现有的 Git 仓库"></a>推送现有的 Git 仓库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd existing_repo</span><br><span class="line">git remote rename origin old-origin</span><br><span class="line">git remote add origin http://`&#123;old-domain&#125;`/private/mybanks.git</span><br><span class="line">git push -u origin --all</span><br><span class="line">git push -u origin --tags</span><br></pre></td></tr></table></figure>
+<hr>
 <ol>
 <li>切换分支：<code>git checkout -b &lt;branch name&gt;</code></li>
 <li>设置远程URL：<code>git branch --set-upstream-to=origin/&lt;branch name&gt;</code></li>
 <li>修改远程URL：<code>git remote set-url origin  http://&#123;new-domain&#125;/cable/guide.git</code></li>
 </ol>
-<h2 id="注：1-2023-06-25-原动态域名-old-domain-过期停用，改为-new-domain-。2-2023-09-04-原服务器（CentOS8无法启动），启用-new-domain-git-remote-set-url-origin-‘http-new-domain-tips-linux-git’"><a href="#注：1-2023-06-25-原动态域名-old-domain-过期停用，改为-new-domain-。2-2023-09-04-原服务器（CentOS8无法启动），启用-new-domain-git-remote-set-url-origin-‘http-new-domain-tips-linux-git’" class="headerlink" title="注：1. [2023-06-25]原动态域名{old-domain}过期停用，改为{new-domain}。2. [2023-09-04]原服务器（CentOS8无法启动），启用{new-domain}.git remote set-url origin ‘http:&#x2F;&#x2F;{new-domain}&#x2F;tips&#x2F;linux.git’"></a>注：<br>1. [2023-06-25]原动态域名<code>&#123;old-domain&#125;</code>过期停用，改为<code>&#123;new-domain&#125;</code>。<br>2. [2023-09-04]原服务器（CentOS8无法启动），启用<code>&#123;new-domain&#125;</code>.<br>git remote set-url origin ‘http:&#x2F;&#x2F;<code>&#123;new-domain&#125;</code>&#x2F;tips&#x2F;linux.git’</h2>
+<h2 id="注：1-2023-06-25-原动态域名-old-domain-过期停用，改为-new-domain-。2-2023-09-04-原服务器（CentOS8无法启动），启用-new-domain-git-remote-set-url-origin-‘http-new-domain-tips-linux-git’"><a href="#注：1-2023-06-25-原动态域名-old-domain-过期停用，改为-new-domain-。2-2023-09-04-原服务器（CentOS8无法启动），启用-new-domain-git-remote-set-url-origin-‘http-new-domain-tips-linux-git’" class="headerlink" title="注：1. [2023-06-25] 原动态域名{old-domain}过期停用，改为{new-domain}。2. [2023-09-04] 原服务器（CentOS8无法启动），启用{new-domain}.git remote set-url origin ‘http:&#x2F;&#x2F;{new-domain}&#x2F;tips&#x2F;linux.git’"></a>注：<br>1. [2023-06-25] 原动态域名<code>&#123;old-domain&#125;</code>过期停用，改为<code>&#123;new-domain&#125;</code>。<br>2. [2023-09-04] 原服务器（CentOS8无法启动），启用<code>&#123;new-domain&#125;</code>.<br>git remote set-url origin ‘http:&#x2F;&#x2F;<code>&#123;new-domain&#125;</code>&#x2F;tips&#x2F;linux.git’</h2>
         
           <p class="article-more-link">
             <a href="/2024/12/23/first-blog/#more">Read More</a>
