@@ -8,7 +8,7 @@
       <link href="/2024/12/26/NET-hotel-manager-system-code-study/"/>
       <url>/2024/12/26/NET-hotel-manager-system-code-study/</url>
       
-        <content type="html"><![CDATA[<h3 id="来自：https-gitee-com-dacom-hotel-management-system-的大聪-酒店管理系统。"><a href="#来自：https-gitee-com-dacom-hotel-management-system-的大聪-酒店管理系统。" class="headerlink" title="来自：https://gitee.com/dacom/hotel-management-system 的大聪&#x2F;酒店管理系统。"></a>来自：<a href="https://gitee.com/dacom/hotel-management-system">https://gitee.com/dacom/hotel-management-system</a> 的大聪&#x2F;酒店管理系统。</h3>]]></content>
+        <content type="html"><![CDATA[<h3 id="来自：https-gitee-com-dacom-hotel-management-system-的大聪-酒店管理系统。"><a href="#来自：https-gitee-com-dacom-hotel-management-system-的大聪-酒店管理系统。" class="headerlink" title="来自：https://gitee.com/dacom/hotel-management-system 的大聪&#x2F;酒店管理系统。"></a>来自：<a href="https://gitee.com/dacom/hotel-management-system">https://gitee.com/dacom/hotel-management-system</a> 的大聪&#x2F;酒店管理系统。</h3><h3 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h3><ol><li>VS2022+SQLServer2012。</li><li>数据库直接附加，注意设置文件权限。</li><li>错误：</li></ol><ul><li>缺少log4net组件，开源组件，直接NuGet搜索安装即可，注意版本，必须兼容.NET4.0（选了2.0.9.0），仅安装到提示错误的项目（TestProject）。使用教程参考：<a href="https://blog.csdn.net/CSDNMantou/article/details/102697863%E3%80%82">https://blog.csdn.net/CSDNMantou/article/details/102697863。</a></li><li>在证书存储区找不到清单签名证书。参考：<a href="https://blog.csdn.net/zb_myrabbit/article/details/83152811%EF%BC%8C%E5%8F%96%E6%B6%88ClickOne%E5%8B%BE%E9%80%89%E5%8D%B3%E5%8F%AF%E3%80%82">https://blog.csdn.net/zb_myrabbit/article/details/83152811，取消ClickOne勾选即可。</a></li></ul><p>4. </p>]]></content>
       
       
       <categories>
