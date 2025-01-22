@@ -121,8 +121,15 @@
 <li>参考：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1591238">https://cloud.tencent.com/developer/article/1591238</a></li>
 </ul>
 <ol>
-<li><code>let</code>：定义一个变量在一个特定作用域，使其在作用域内可使用，（统一）避免一个判空操作。</li>
+<li><code>let</code>：定义一个变量在一个特定作用域，使其在作用域内可使用，（统一）避免一个判空操作。返回值 &#x3D; 最后一行 &#x2F; return的表达式。</li>
+<li><code>aslo</code>：与<code>let</code>类似，区别在于：返回值 &#x3D; 传入的对象的本身。</li>
+<li><code>with</code>：调用同一个对象的多个方法 &#x2F; 属性时，可以省去对象名重复，直接调用方法名 &#x2F; 属性即可，返回值 &#x3D; 函数块的最后一行 &#x2F; return表达式。</li>
+<li><code>run</code>：结合了let、with两个函数的作用，返回值 &#x3D; 函数块的最后一行 &#x2F; return表达式。</li>
+<li><code>apply</code>：与run函数类似，但区别在于返回值，apply函数返回传入的对象的本身。</li>
 </ol>
+<ul>
+<li>总结：<br><img src="/kotlin_functions.png" alt="Kotlin函数"></li>
+</ul>
 
       
     </div>
