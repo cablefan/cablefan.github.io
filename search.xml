@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Kotlin Basic</title>
+      <link href="/2025/01/21/Kotlin-Basic/"/>
+      <url>/2025/01/21/Kotlin-Basic/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Kotlin注解"><a href="#Kotlin注解" class="headerlink" title="Kotlin注解"></a>Kotlin注解</h3><ul><li>参考：<a href="https://blog.csdn.net/zyctimes/article/details/127199167">https://blog.csdn.net/zyctimes/article/details/127199167</a></li><li>常用函数注解：<code>Suppress，Volatile, Synchronized, Bindable, RequiresApi，SerializedName</code></li></ul><ol><li><code>Deprecated</code>：如果需要废弃一个方法，只需要在方法钱加上 @Deprecated 即可。</li><li><code>Suppress</code>：如果需要消除一些编译时的警告，可以使用 @Suppress(“xxx”) 。</li><li><code>Volatile</code>：为了强制变量中的更改立即对其他线程可见，我们可以使用注解 @Volatile。</li><li><code>Synchronized</code>：Java 有 synchronized 关键字，可以将其应用于方法以确保一次只有一个线程可以访问它们。进入同步方法的线程获得锁（被锁定的对象是包含类的实例），并且在释放锁之前没有其他线程可以进入该方法。Kotlin通过 @Synchronized 注解提供了相同的功能。</li><li><code>Bindable</code>：数据绑定有两种与数据交互的基本方式：BaseObservable 类及其关联的 @Bindable 注释，以及 LiveData 可观察包装器（LiveData observable wrapper）。</li><li><code>RequiresApi</code>：需要调用一些之前版本的API，比如需要调用API 26，Android 8 (Oreo)，即，在函数的上一行加上 @RequiresApi(Build.VERSION_CODES.O) 即可。</li><li><code>SerializedName</code>：通常使用@SerializedName批注来映射JSON字段。</li></ol><h3 id="巧用Kotlin：内置函数let、also、with、run、apply大大提高你的开发效率！"><a href="#巧用Kotlin：内置函数let、also、with、run、apply大大提高你的开发效率！" class="headerlink" title="巧用Kotlin：内置函数let、also、with、run、apply大大提高你的开发效率！"></a>巧用Kotlin：内置函数let、also、with、run、apply大大提高你的开发效率！</h3><ul><li>参考：<a href="https://cloud.tencent.com/developer/article/1591238">https://cloud.tencent.com/developer/article/1591238</a></li></ul><ol><li><code>let</code>：定义一个变量在一个特定作用域，使其在作用域内可使用，（统一）避免一个判空操作。返回值 &#x3D; 最后一行 &#x2F; return的表达式。</li><li><code>aslo</code>：与<code>let</code>类似，区别在于：返回值 &#x3D; 传入的对象的本身。</li><li><code>with</code>：调用同一个对象的多个方法 &#x2F; 属性时，可以省去对象名重复，直接调用方法名 &#x2F; 属性即可，返回值 &#x3D; 函数块的最后一行 &#x2F; return表达式。</li><li><code>run</code>：结合了let、with两个函数的作用，返回值 &#x3D; 函数块的最后一行 &#x2F; return表达式。</li><li><code>apply</code>：与run函数类似，但区别在于返回值，apply函数返回传入的对象的本身。</li></ol><ul><li>总结：<br><img src="/images/kotlin_functions.png" alt="Kotlin函数"></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Kotlin </category>
+          
+          <category> Android </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>.NET hotel manager system code study</title>
+      <link href="/2024/12/26/NET-hotel-manager-system-code-study/"/>
+      <url>/2024/12/26/NET-hotel-manager-system-code-study/</url>
+      
+        <content type="html"><![CDATA[<h3 id="来自：https-gitee-com-dacom-hotel-management-system-的大聪-酒店管理系统。"><a href="#来自：https-gitee-com-dacom-hotel-management-system-的大聪-酒店管理系统。" class="headerlink" title="来自：https://gitee.com/dacom/hotel-management-system 的大聪&#x2F;酒店管理系统。"></a>来自：<a href="https://gitee.com/dacom/hotel-management-system">https://gitee.com/dacom/hotel-management-system</a> 的大聪&#x2F;酒店管理系统。</h3><h3 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h3><ol><li>VS2022+SQLServer2012。</li><li>数据库直接附加，注意设置文件权限。</li><li>错误：</li></ol><ul><li>缺少log4net组件，开源组件，直接NuGet搜索安装即可，注意版本，必须兼容.NET4.0（选了2.0.9.0），仅安装到提示错误的项目（TestProject）。使用教程参考：<a href="https://blog.csdn.net/CSDNMantou/article/details/102697863%E3%80%82">https://blog.csdn.net/CSDNMantou/article/details/102697863。</a></li><li>在证书存储区找不到清单签名证书。参考：<a href="https://blog.csdn.net/zb_myrabbit/article/details/83152811%EF%BC%8C%E5%8F%96%E6%B6%88ClickOne%E5%8B%BE%E9%80%89%E5%8D%B3%E5%8F%AF%E3%80%82">https://blog.csdn.net/zb_myrabbit/article/details/83152811，取消ClickOne勾选即可。</a></li></ul><p>4. </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> .Net </category>
+          
+          <category> Desktop </category>
+          
+          <category> C# </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Laravel Filament Notes</title>
+      <link href="/2024/12/23/laravel-filament/"/>
+      <url>/2024/12/23/laravel-filament/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Laravel-Filament-使用流水笔记。"><a href="#Laravel-Filament-使用流水笔记。" class="headerlink" title="Laravel Filament 使用流水笔记。"></a><i>Laravel Filament 使用流水笔记。</i></h2><hr/><h3 id="2024-06-12-Select组件通过relationship关联列表"><a href="#2024-06-12-Select组件通过relationship关联列表" class="headerlink" title="[2024-06-12] Select组件通过relationship关联列表"></a>[2024-06-12] Select组件通过relationship关联列表</h3><ol><li>在编辑表中定义BelongsTo字段，关联到提供列表的表Model。<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">category</span>(<span class="params"></span>): <span class="title">BelongsTo</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">belongsTo</span>(<span class="title class_">Category</span>::<span class="variable language_">class</span>, <span class="string">&#x27;category_id&#x27;</span>, <span class="string">&#x27;id&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li>再定义Select组件，使用relationship方法关联进来<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Forms\Components\Select</span>::<span class="title function_ invoke__">make</span>(<span class="string">&#x27;category_id&#x27;</span>) </span><br><span class="line">            -&gt;<span class="title function_ invoke__">relationship</span>(<span class="string">&#x27;category&#x27;</span>, <span class="string">&#x27;name&#x27;</span>), </span><br></pre></td></tr></table></figure></li></ol><ul><li>可以通过getOptionLabelFromRecordUsing方法将显示值进行自定义。</li></ul><h3 id="2024-06-12-Select（或Radio）组件的值必须是键名-键值对"><a href="#2024-06-12-Select（或Radio）组件的值必须是键名-键值对" class="headerlink" title="[2024-06-12] Select（或Radio）组件的值必须是键名-键值对"></a>[2024-06-12] Select（或Radio）组件的值必须是键名-键值对</h3><ul><li>Select组件指定的值，即使显示值和保存值相同，也必须设置数组的键名-键值对，否则无法正常显示（可能获取到了默认数字键名0,1…无法匹配）<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Forms\Components\Select</span>::<span class="title function_ invoke__">make</span>(<span class="string">&#x27;Country&#x27;</span>)-&gt;<span class="title function_ invoke__">options</span>([</span><br><span class="line">                    <span class="string">&#x27;英国&#x27;</span> =&gt; <span class="string">&#x27;英国&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;美国&#x27;</span> =&gt; <span class="string">&#x27;美国&#x27;</span>,</span><br><span class="line">                    <span class="string">&#x27;德国&#x27;</span> =&gt; <span class="string">&#x27;德国&#x27;</span></span><br><span class="line">                ])</span><br></pre></td></tr></table></figure></li></ul><h3 id="2024-06-11-Filament中的Tabs"><a href="#2024-06-11-Filament中的Tabs" class="headerlink" title="[2024-06-11] Filament中的Tabs"></a>[2024-06-11] Filament中的Tabs</h3><ul><li><code>Tab::make($name)-&gt;label($label)</code>，创建时make中的$name参数必须是规范的组件名，而不是标题（显示标题通过label函数指定），指定中文等不规范的命名将导致页面异常并且不可点击。</li><li>而<code>Forms\Components\Section</code>组件则是相反的，它的label()方法并不起作用，标题必须作为make()方法的参数传入。</li></ul><h3 id="2024-01-18-Filament-Table头部按钮"><a href="#2024-01-18-Filament-Table头部按钮" class="headerlink" title="[2024-01-18] Filament.Table头部按钮"></a>[2024-01-18] Filament.Table头部按钮</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$table</span>-&gt;<span class="title function_ invoke__">headerActions</span>([</span><br><span class="line">    <span class="title class_">ExportAction</span>::<span class="title function_ invoke__">make</span>(),</span><br><span class="line">    ... //创建Action数组</span><br><span class="line">], <span class="title class_">HeaderActionsPosition</span>::<span class="variable constant_">Bottom</span>) <span class="comment">//指定对方方式，Bottom为左对齐</span></span><br></pre></td></tr></table></figure><h3 id="2024-01-18-创建一个弹出ModalDialog的Action"><a href="#2024-01-18-创建一个弹出ModalDialog的Action" class="headerlink" title="[2024-01-18] 创建一个弹出ModalDialog的Action"></a>[2024-01-18] 创建一个弹出ModalDialog的Action</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Tables\Actions\Action</span>::<span class="title function_ invoke__">make</span>(<span class="string">&#x27;sync&#x27;</span>)</span><br><span class="line">  -&gt;<span class="title function_ invoke__">label</span>(<span class="title function_ invoke__">__</span>(<span class="string">&#x27;Sync&#x27;</span>))</span><br><span class="line">  -&gt;<span class="title function_ invoke__">form</span>([</span><br><span class="line">       //创建一个选择框</span><br><span class="line">       <span class="title class_">Forms\Components\Select</span>::<span class="title function_ invoke__">make</span>(<span class="string">&#x27;channel_id&#x27;</span>)</span><br><span class="line">          -&gt;<span class="title function_ invoke__">label</span>(<span class="title function_ invoke__">__</span>(<span class="string">&#x27;Shop&#x27;</span>))</span><br><span class="line">          -&gt;<span class="title function_ invoke__">required</span>()</span><br><span class="line">          -&gt;<span class="title function_ invoke__">options</span>(<span class="title class_">Shop</span>::<span class="title function_ invoke__">all</span>()-&gt;<span class="title function_ invoke__">pluck</span>(<span class="string">&#x27;Title&#x27;</span>, <span class="string">&#x27;ChannelId&#x27;</span>))</span><br><span class="line">  ])</span><br><span class="line">  -&gt;<span class="title function_ invoke__">modalWidth</span>(<span class="title class_">MaxWidth</span>::<span class="variable constant_">Small</span>) <span class="comment">//指定对话框大小</span></span><br><span class="line">  -&gt;<span class="title function_ invoke__">action</span>(function (Table <span class="variable">$table</span>, <span class="keyword">array</span> <span class="variable">$data</span>)  &#123;</span><br><span class="line">      <span class="comment">//alert($data[&#x27;channel_id&#x27;]);</span></span><br><span class="line">      <span class="variable">$filter</span> = <span class="variable">$table</span>-&gt;<span class="title function_ invoke__">getFilter</span>(<span class="string">&#x27;shop&#x27;</span>);</span><br><span class="line">      <span class="variable">$filter</span>-&gt;<span class="title function_ invoke__">modifyQueryUsing</span>(fn (Builder <span class="variable">$query</span>) =&gt; <span class="variable">$query</span>-&gt;<span class="title function_ invoke__">where</span>([<span class="string">&quot;ChannelId&quot;</span> =&gt; <span class="variable">$data</span>[<span class="string">&quot;channel_id&quot;</span>]])</span><br><span class="line">  );</span><br></pre></td></tr></table></figure><h3 id="2024-01-19-在form中添加按钮"><a href="#2024-01-19-在form中添加按钮" class="headerlink" title="[2024-01-19] 在form中添加按钮"></a>[2024-01-19] 在form中添加按钮</h3><ul><li><p>在form中可用的Components并没有按钮组件，而要创建Action并调用-&gt;button()实现；</p></li><li><p>但是，form()方法只接受Forms\Components\组件的数组，直接添加Action实例是不允许的；</p></li><li><p>正确的做法是，创建一个Actions，并向make方法的参数传入一个数组，在该数组中创建Action：</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">-&gt;<span class="title function_ invoke__">form</span>([</span><br><span class="line">    ... //其它组件</span><br><span class="line">    <span class="title class_">Forms\Components\Actions</span>::<span class="title function_ invoke__">make</span>([</span><br><span class="line">        <span class="title class_">Forms\Components\Actions\Action</span>::<span class="title function_ invoke__">make</span>(<span class="string">&#x27;Generate excerpt&#x27;</span>)</span><br><span class="line">            -&gt;<span class="title function_ invoke__">action</span>(function (<span class="keyword">array</span> <span class="variable">$data</span>): <span class="keyword">void</span> &#123;</span><br><span class="line">                //执行操作</span><br><span class="line">            &#125;)</span><br><span class="line">    ])</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> PHP </category>
+          
+          <category> Notes </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git Command Guide</title>
+      <link href="/2024/12/23/first-blog/"/>
+      <url>/2024/12/23/first-blog/</url>
+      
+        <content type="html"><![CDATA[<h2>GIT命令行指引</h2><i>您还可以按照以下说明从计算机中上传现有文件。</i><hr/><h3 id="Git-全局设置"><a href="#Git-全局设置" class="headerlink" title="Git 全局设置"></a>Git 全局设置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Cable Home&quot;</span><br><span class="line">git config --global user.email &quot;cablefan@hotmail.com&quot;</span><br></pre></td></tr></table></figure><h3 id="创建一个新仓库"><a href="#创建一个新仓库" class="headerlink" title="创建一个新仓库"></a>创建一个新仓库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git clone http://&#123;old-domain&#125;/private/mybanks.git</span><br><span class="line">cd mybanks</span><br><span class="line">git switch -c main</span><br><span class="line">touch README.md</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;add README&quot;</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure><h3 id="推送现有文件夹"><a href="#推送现有文件夹" class="headerlink" title="推送现有文件夹"></a>推送现有文件夹</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd existing_folder</span><br><span class="line">git init --initial-branch=main</span><br><span class="line">git remote add origin http://`&#123;old-domain&#125;`/private/mybanks.git</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;Initial commit&quot;</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure><h3 id="推送现有的-Git-仓库"><a href="#推送现有的-Git-仓库" class="headerlink" title="推送现有的 Git 仓库"></a>推送现有的 Git 仓库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd existing_repo</span><br><span class="line">git remote rename origin old-origin</span><br><span class="line">git remote add origin http://`&#123;old-domain&#125;`/private/mybanks.git</span><br><span class="line">git push -u origin --all</span><br><span class="line">git push -u origin --tags</span><br></pre></td></tr></table></figure><hr><ol><li>切换分支：<code>git checkout -b &lt;branch name&gt;</code></li><li>设置远程URL：<code>git branch --set-upstream-to=origin/&lt;branch name&gt;</code></li><li>修改远程URL：<code>git remote set-url origin  http://&#123;new-domain&#125;/cable/guide.git</code></li></ol><hr><ul><li>注：</li></ul><ol><li>[2023-06-25] 原动态域名<code>&#123;old-domain&#125;</code>过期停用，改为<code>&#123;new-domain&#125;</code>。</li><li>[2023-09-04] 原服务器（CentOS8无法启动），启用<code>&#123;new-domain&#125;</code>.</li><li>更换远程url命令：<code>git remote set-url origin &#39;http://`&#123;new-domain&#125;`/tips/linux.git&#39;</code></li></ol><span id="more"></span>]]></content>
+      
+      
+      <categories>
+          
+          <category> Others </category>
+          
+          <category> Notes </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2024/12/23/hello-world/"/>
+      <url>/2024/12/23/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="出现连接失败时的解决法"><a href="#出现连接失败时的解决法" class="headerlink" title="出现连接失败时的解决法"></a>出现连接失败时的解决法</h3><ul><li>参考：<a href="https://blog.csdn.net/qq_36408085/article/details/104117293">https://blog.csdn.net/qq_36408085/article/details/104117293</a></li></ul><h3 id="在PowerShell或者VSCode-Terminal中执行命令前需要变更执行策略："><a href="#在PowerShell或者VSCode-Terminal中执行命令前需要变更执行策略：" class="headerlink" title="在PowerShell或者VSCode Terminal中执行命令前需要变更执行策略："></a>在PowerShell或者VSCode Terminal中执行命令前需要变更执行策略：</h3><p><code>Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process</code></p><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>

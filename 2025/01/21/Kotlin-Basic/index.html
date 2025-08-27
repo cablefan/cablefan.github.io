@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Kotlin Basic | 巴才网</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Kotlin注解 参考：https:&#x2F;&#x2F;blog.csdn.net&#x2F;zyctimes&#x2F;article&#x2F;details&#x2F;127199167 常用函数注解：Suppress，Volatile, Synchronized, Bindable, RequiresApi，SerializedName   Deprecated：如果需要废弃一个方法，只需要在方法钱加上 @Deprecated 即可。 Supp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kotlin Basic">
+<meta property="og:url" content="https://cablefan.github.io/2025/01/21/Kotlin-Basic/index.html">
+<meta property="og:site_name" content="巴才网">
+<meta property="og:description" content="Kotlin注解 参考：https:&#x2F;&#x2F;blog.csdn.net&#x2F;zyctimes&#x2F;article&#x2F;details&#x2F;127199167 常用函数注解：Suppress，Volatile, Synchronized, Bindable, RequiresApi，SerializedName   Deprecated：如果需要废弃一个方法，只需要在方法钱加上 @Deprecated 即可。 Supp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cablefan.github.io/images/kotlin_functions.png">
+<meta property="article:published_time" content="2025-01-21T09:21:03.000Z">
+<meta property="article:modified_time" content="2025-01-22T07:15:48.499Z">
+<meta property="article:author" content="Cable Fan">
+<meta property="article:tag" content="code,blog,notes">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cablefan.github.io/images/kotlin_functions.png">
+  
+    <link rel="alternate" href="/atom.xml" title="巴才网" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">巴才网</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Code on blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://cablefan.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Kotlin-Basic" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/01/21/Kotlin-Basic/" class="article-date">
+  <time class="dt-published" datetime="2025-01-21T09:21:03.000Z" itemprop="datePublished">2025-01-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Kotlin/">Kotlin</a>►<a class="article-category-link" href="/categories/Kotlin/android/">Android</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Kotlin Basic
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="Kotlin注解"><a href="#Kotlin注解" class="headerlink" title="Kotlin注解"></a>Kotlin注解</h3><ul>
+<li>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zyctimes/article/details/127199167">https://blog.csdn.net/zyctimes/article/details/127199167</a></li>
+<li>常用函数注解：<code>Suppress，Volatile, Synchronized, Bindable, RequiresApi，SerializedName</code></li>
+</ul>
+<ol>
+<li><code>Deprecated</code>：如果需要废弃一个方法，只需要在方法钱加上 @Deprecated 即可。</li>
+<li><code>Suppress</code>：如果需要消除一些编译时的警告，可以使用 @Suppress(“xxx”) 。</li>
+<li><code>Volatile</code>：为了强制变量中的更改立即对其他线程可见，我们可以使用注解 @Volatile。</li>
+<li><code>Synchronized</code>：Java 有 synchronized 关键字，可以将其应用于方法以确保一次只有一个线程可以访问它们。进入同步方法的线程获得锁（被锁定的对象是包含类的实例），并且在释放锁之前没有其他线程可以进入该方法。Kotlin通过 @Synchronized 注解提供了相同的功能。</li>
+<li><code>Bindable</code>：数据绑定有两种与数据交互的基本方式：BaseObservable 类及其关联的 @Bindable 注释，以及 LiveData 可观察包装器（LiveData observable wrapper）。</li>
+<li><code>RequiresApi</code>：需要调用一些之前版本的API，比如需要调用API 26，Android 8 (Oreo)，即，在函数的上一行加上 @RequiresApi(Build.VERSION_CODES.O) 即可。</li>
+<li><code>SerializedName</code>：通常使用@SerializedName批注来映射JSON字段。</li>
+</ol>
+<h3 id="巧用Kotlin：内置函数let、also、with、run、apply大大提高你的开发效率！"><a href="#巧用Kotlin：内置函数let、also、with、run、apply大大提高你的开发效率！" class="headerlink" title="巧用Kotlin：内置函数let、also、with、run、apply大大提高你的开发效率！"></a>巧用Kotlin：内置函数let、also、with、run、apply大大提高你的开发效率！</h3><ul>
+<li>参考：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1591238">https://cloud.tencent.com/developer/article/1591238</a></li>
+</ul>
+<ol>
+<li><code>let</code>：定义一个变量在一个特定作用域，使其在作用域内可使用，（统一）避免一个判空操作。返回值 &#x3D; 最后一行 &#x2F; return的表达式。</li>
+<li><code>aslo</code>：与<code>let</code>类似，区别在于：返回值 &#x3D; 传入的对象的本身。</li>
+<li><code>with</code>：调用同一个对象的多个方法 &#x2F; 属性时，可以省去对象名重复，直接调用方法名 &#x2F; 属性即可，返回值 &#x3D; 函数块的最后一行 &#x2F; return表达式。</li>
+<li><code>run</code>：结合了let、with两个函数的作用，返回值 &#x3D; 函数块的最后一行 &#x2F; return表达式。</li>
+<li><code>apply</code>：与run函数类似，但区别在于返回值，apply函数返回传入的对象的本身。</li>
+</ol>
+<ul>
+<li>总结：<br><img src="/images/kotlin_functions.png" alt="Kotlin函数"></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cablefan.github.io/2025/01/21/Kotlin-Basic/" data-id="cm67cymd90000zsbw5k4q8p0s" data-title="Kotlin Basic" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/12/26/NET-hotel-manager-system-code-study/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">.NET hotel manager system code study</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Kategorien</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Net/">.Net</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Net/Desktop/">Desktop</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Net/Desktop/csharp/">C#</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Kotlin/">Kotlin</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Kotlin/android/">Android</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/others/">Others</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/others/notes/">Notes</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">PHP</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/php/notes/">Notes</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">一月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/12/">十二月 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/01/21/Kotlin-Basic/">Kotlin Basic</a>
+          </li>
+        
+          <li>
+            <a href="/2024/12/26/NET-hotel-manager-system-code-study/">.NET hotel manager system code study</a>
+          </li>
+        
+          <li>
+            <a href="/2024/12/23/laravel-filament/">Laravel Filament Notes</a>
+          </li>
+        
+          <li>
+            <a href="/2024/12/23/first-blog/">Git Command Guide</a>
+          </li>
+        
+          <li>
+            <a href="/2024/12/23/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 Cable Fan<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

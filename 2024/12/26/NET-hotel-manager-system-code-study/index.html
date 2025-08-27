@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>.NET hotel manager system code study | 巴才网</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="来自：https:&#x2F;&#x2F;gitee.com&#x2F;dacom&#x2F;hotel-management-system 的大聪&#x2F;酒店管理系统。安装过程 VS2022+SQLServer2012。 数据库直接附加，注意设置文件权限。 错误：   缺少log4net组件，开源组件，直接NuGet搜索安装即可，注意版本，必须兼容.NET4.0（选了2.0.9.0），仅安装到提示错误的项目（TestProject">
+<meta property="og:type" content="article">
+<meta property="og:title" content=".NET hotel manager system code study">
+<meta property="og:url" content="https://cablefan.github.io/2024/12/26/NET-hotel-manager-system-code-study/index.html">
+<meta property="og:site_name" content="巴才网">
+<meta property="og:description" content="来自：https:&#x2F;&#x2F;gitee.com&#x2F;dacom&#x2F;hotel-management-system 的大聪&#x2F;酒店管理系统。安装过程 VS2022+SQLServer2012。 数据库直接附加，注意设置文件权限。 错误：   缺少log4net组件，开源组件，直接NuGet搜索安装即可，注意版本，必须兼容.NET4.0（选了2.0.9.0），仅安装到提示错误的项目（TestProject">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-12-26T10:41:39.000Z">
+<meta property="article:modified_time" content="2024-12-26T10:51:29.535Z">
+<meta property="article:author" content="Cable Fan">
+<meta property="article:tag" content="code,blog,notes">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="巴才网" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">巴才网</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Code on blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://cablefan.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-NET-hotel-manager-system-code-study" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/12/26/NET-hotel-manager-system-code-study/" class="article-date">
+  <time class="dt-published" datetime="2024-12-26T10:41:39.000Z" itemprop="datePublished">2024-12-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Net/">.Net</a>►<a class="article-category-link" href="/categories/Net/Desktop/">Desktop</a>►<a class="article-category-link" href="/categories/Net/Desktop/csharp/">C#</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      .NET hotel manager system code study
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="来自：https-gitee-com-dacom-hotel-management-system-的大聪-酒店管理系统。"><a href="#来自：https-gitee-com-dacom-hotel-management-system-的大聪-酒店管理系统。" class="headerlink" title="来自：https://gitee.com/dacom/hotel-management-system 的大聪&#x2F;酒店管理系统。"></a>来自：<a target="_blank" rel="noopener" href="https://gitee.com/dacom/hotel-management-system">https://gitee.com/dacom/hotel-management-system</a> 的大聪&#x2F;酒店管理系统。</h3><h3 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h3><ol>
+<li>VS2022+SQLServer2012。</li>
+<li>数据库直接附加，注意设置文件权限。</li>
+<li>错误：</li>
+</ol>
+<ul>
+<li>缺少log4net组件，开源组件，直接NuGet搜索安装即可，注意版本，必须兼容.NET4.0（选了2.0.9.0），仅安装到提示错误的项目（TestProject）。使用教程参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/CSDNMantou/article/details/102697863%E3%80%82">https://blog.csdn.net/CSDNMantou/article/details/102697863。</a></li>
+<li>在证书存储区找不到清单签名证书。参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zb_myrabbit/article/details/83152811%EF%BC%8C%E5%8F%96%E6%B6%88ClickOne%E5%8B%BE%E9%80%89%E5%8D%B3%E5%8F%AF%E3%80%82">https://blog.csdn.net/zb_myrabbit/article/details/83152811，取消ClickOne勾选即可。</a></li>
+</ul>
+<p>4. </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cablefan.github.io/2024/12/26/NET-hotel-manager-system-code-study/" data-id="cm55759cg0000ccbwf2157d2q" data-title=".NET hotel manager system code study" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2025/01/21/Kotlin-Basic/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          Kotlin Basic
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/12/23/laravel-filament/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">Laravel Filament Notes</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Kategorien</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Net/">.Net</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Net/Desktop/">Desktop</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Net/Desktop/csharp/">C#</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Kotlin/">Kotlin</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Kotlin/android/">Android</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/others/">Others</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/others/notes/">Notes</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">PHP</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/php/notes/">Notes</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">一月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/12/">十二月 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/01/21/Kotlin-Basic/">Kotlin Basic</a>
+          </li>
+        
+          <li>
+            <a href="/2024/12/26/NET-hotel-manager-system-code-study/">.NET hotel manager system code study</a>
+          </li>
+        
+          <li>
+            <a href="/2024/12/23/laravel-filament/">Laravel Filament Notes</a>
+          </li>
+        
+          <li>
+            <a href="/2024/12/23/first-blog/">Git Command Guide</a>
+          </li>
+        
+          <li>
+            <a href="/2024/12/23/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 Cable Fan<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
